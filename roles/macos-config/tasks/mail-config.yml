@@ -1,0 +1,30 @@
+- name: Display emails in threaded mode, sorted by date (newest at the top)
+  block:
+    - command: defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
+    - command: defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
+    - command: defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
+    - osx_defaults:
+        domain: com.apple.mail
+        key: ConversationViewSortDescending
+        type: bool
+        value: true
+        state: present
+
+- name: Disable inline attachments (just show the icons)
+  osx_defaults:
+    domain: com.apple.mail
+    key: DisableInlineAttachmentViewing
+    type: bool
+    value: true
+    state: present
+
+- name: Disable automatic spell checking
+  osx_defaults:
+    domain: com.apple.mail
+    key: SpellCheckingBehavior
+    type: string
+    value: NoSpellCheckingEnabled
+    state: present
+
+- name: Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
+  command: defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
