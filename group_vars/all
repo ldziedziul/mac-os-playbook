@@ -41,8 +41,6 @@ homebrew_cask:
 
 dockitems_to_remove:
   - Contacts
-  - Notes
-  - Reminders
   - Maps
   - Photos
   - FaceTime
