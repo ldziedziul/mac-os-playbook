@@ -1,5 +1,5 @@
-dotfiles_repository: pivovarit/dotfiles
-login_window_text: gpiwowarek@gmail.com
+dotfiles_repository: ldziedziul/dotfiles
+login_window_text: l.dziedziul@gmail.com
 dock_icon_size: 60
 
 homebrew:
