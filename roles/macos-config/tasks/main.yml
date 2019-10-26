@@ -78,9 +78,6 @@
 - name: Show Battery Percent
   osx_defaults: domain=com.apple.menuextra.battery key=ShowPercent type=string value="YES"
 
-- name: Enable Tap to Click
-  osx_defaults: domain=com.apple.AppleMultitouchTrackpad key=Clicking type=int value=1
-
 - name: Disable CrashReporter
   command: defaults write com.apple.CrashReporter DialogType -string "none"
 
