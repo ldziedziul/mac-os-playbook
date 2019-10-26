@@ -2,7 +2,7 @@
 
 set -e
 
-readonly REPOSITORY="https://github.com/pivovarit/mac-os-playbook"
+readonly REPOSITORY="https://github.com/ldziedziul/mac-os-playbook"
 TARGET="$(pwd)"
 
 RED=""
