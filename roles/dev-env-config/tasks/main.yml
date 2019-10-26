@@ -1,17 +1,17 @@
-- name: Create ~/Dev Directory
+- name: Create ~/projects/private Directory
   file:
     state: directory
-    path: ~/Dev
+    path: ~/projects/private
 
-- name: Pull Repositories
+- name: Pull Private Repositories
   git:
     repo: "https://github.com/{{ item }}.git"
-    dest: "~/Dev/{{ item }}"
+    dest: "~/projects/private/{{ item }}"
     update: no
   loop: "{{ github_projects }}"
 
 - name: Update Remote SSH URLs
   command: "git remote set-url origin git@github.com:{{ item }}.git"
   args:
-    chdir: "~/Dev/{{ item }}"
+    chdir: "~/projects/private/{{ item }}"
   loop: "{{ github_projects }}"
