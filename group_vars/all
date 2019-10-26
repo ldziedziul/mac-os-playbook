@@ -52,11 +52,6 @@ dockitems_to_remove:
   - Siri
 
 github_projects:
-  - pivovarit/parallel-collectors
-  - pivovarit/articles
-  - pivovarit/es-collections
-  - pivovarit/throwing-function
-  - pivovarit/thread-factory
-  - pivovarit/pivovarit.github.io
-  - pivovarit/mac-os-playbook
+  - ldziedziul/diy-ioc-container
+  - ldziedziul/mac-os-playbook
 
