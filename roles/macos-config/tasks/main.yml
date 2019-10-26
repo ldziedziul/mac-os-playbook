@@ -8,11 +8,6 @@
 - name: Safari Configuration
   include: safari-config.yml
 
-- name: Create ~/Screenshots Directory
-  file:
-    state: directory
-    path: "{{ ansible_env.HOME }}/Desktop/Screenshots"
-
 - name: Unhide Directories
   become: true
   command: "chflags nohidden /{{ item }}"
@@ -52,7 +47,6 @@
     - { domain: "com.apple.frameworks.diskimages", key: "auto-open-rw-root", type: "bool", value: "true" }
     - { domain: "com.apple.desktopservices", key: "DSDontWriteNetworkStores", type: "bool", value: "true" }
     - { domain: "com.apple.desktopservices", key: "DSDontWriteUSBStores", type: "bool", value: "true" }
-    - { domain: "com.apple.screencapture", key: "location", type: "string", value: "{{ ansible_env.HOME }}/Desktop/Screenshots" }
     - { domain: "com.apple.screencapture", key: "type", type: "string", value: "png" }
     - { domain: "com.apple.screencapture", key: "disable-shadow", type: "bool", value: "true" }
     - { domain: "com.apple.BluetoothAudioAgent", key: "Apple Bitpool Min (editable)", type: "int", value: "40" }
