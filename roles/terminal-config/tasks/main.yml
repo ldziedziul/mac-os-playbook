@@ -99,3 +99,13 @@
   when: "'iTerm' not in login_items.stdout"
   ignore_errors: true
   become: true
+
+- name: hide iTerm from Dock
+  osx_defaults: domain=com.googlecode.iterm2 key={{ item.key }} type={{ item.type }} value={{ item.value }}
+  tags:
+    - iterm
+  with_items:
+    - { key: "HideFromDockAndAppSwitcher", type: "string", value: "1" }
+  notify:
+    - Kill iTerm
+    - Start iTerm
