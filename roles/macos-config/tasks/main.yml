@@ -50,7 +50,6 @@
     - { domain: "com.apple.screencapture", key: "type", type: "string", value: "png" }
     - { domain: "com.apple.screencapture", key: "disable-shadow", type: "bool", value: "true" }
     - { domain: "com.apple.BluetoothAudioAgent", key: "Apple Bitpool Min (editable)", type: "int", value: "40" }
-    - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "Clicking", type: "int", value: "1" }
     - { domain: "com.apple.SoftwareUpdate", key: "ScheduleFrequency", type: "int", value: "1" }
     - { domain: "com.apple.SoftwareUpdate", key: "AutomaticCheckEnabled", type: "bool", value: "true" }
     - { domain: "com.apple.SoftwareUpdate", key: "AutomaticDownload", type: "int", value: "1" }
