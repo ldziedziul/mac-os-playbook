@@ -107,3 +107,11 @@
   notify:
     - Kill iTerm
     - Start iTerm
+
+- name: Use Touch ID for sudo
+  tags: sudo
+  lineinfile:
+    dest: /etc/pam.d/sudo
+    insertafter: '^# sudo: auth account password session'
+    line: "auth       sufficient     pam_tid.so"
+  become: true
