@@ -15,3 +15,13 @@
   args:
     chdir: "~/projects/private/{{ item }}"
   loop: "{{ github_projects }}"
+
+- name: Clean old docker test images
+  tags:
+   - docker
+   - cron
+  cron:
+    name: 'Clean old docker test images'
+    hour: '8'
+    minute: '0'
+    job: "docker images | grep _service | awk '{print $3}' | sort | uniq | xargs  docker rmi -f"
