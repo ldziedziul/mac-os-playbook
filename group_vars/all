@@ -29,6 +29,7 @@ homebrew:
   - zsh
 
 homebrew_cask:
+  - rectangle
   - docker
   - google-chrome
   - google-hangouts
