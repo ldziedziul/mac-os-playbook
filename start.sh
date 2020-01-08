@@ -2,7 +2,7 @@
 
 set -e
 
-readonly REPOSITORY="https://github.com/ldziedziul/mac-os-playbook"
+readonly REPOSITORY="$(git remote get-url origin)"
 TARGET="$(pwd)"
 
 RED=""
@@ -41,6 +41,13 @@ command -v "git" >/dev/null 2>&1 || error "git is not installed"
 
 [[ "$1" = "--local" ]] || generate_temp_dir
 
+for arg do
+  shift
+  [ "$arg" = "--local" ] && continue
+  set -- "$@" "$arg"
+done
+
+
 if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr/bin/gcc ]];
     then
         installing "xcode" && xcode-select --install
@@ -57,4 +64,4 @@ fi
 
 export PATH=/usr/local/bin:$PATH
 
-cd "$TARGET" && ansible-playbook playbook.yml -K
+cd "$TARGET" && ansible-playbook playbook.yml -K $@
