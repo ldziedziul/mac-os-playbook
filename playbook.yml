@@ -4,7 +4,7 @@
   roles:
     - macos-config
     - homebrew
-#    - dotfiles-config
+    - dotfiles-config
     - terminal-config
     - dev-env-config
 

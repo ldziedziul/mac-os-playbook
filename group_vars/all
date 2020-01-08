@@ -8,6 +8,7 @@ homebrew:
   - bash
   - bash-completion
   - curl
+  - direnv
   - docker
   - docker-compose
   - git
@@ -54,3 +55,6 @@ github_projects:
   - ldziedziul/diy-ioc-container
   - ldziedziul/mac-os-playbook
 
+direnv_files:
+  - projects/private/.envrc
+  - projects/casumo/.envrc
