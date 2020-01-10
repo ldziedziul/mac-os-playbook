@@ -30,12 +30,13 @@ homebrew:
   - zsh
 
 homebrew_cask:
-  - rectangle
+  - cyberduck
   - docker
   - google-chrome
   - google-hangouts
   - iterm2
   - karabiner-elements
+  - rectangle
   - slack
   - virtualbox
   - vlc
