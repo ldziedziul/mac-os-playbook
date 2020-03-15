@@ -16,6 +16,7 @@
     - opt
     - etc
     - var
+    - Volumes
 
 - name: Show the ~/Library folder
   shell: chflags nohidden ~/Library
