@@ -31,11 +31,13 @@ homebrew:
   - zsh
 
 homebrew_cask:
+  - apptivate
   - cyberduck
   - docker
   - google-chrome
   - google-hangouts
   - iterm2
+  - kitty
   - karabiner-elements
   - rectangle
   - slack
