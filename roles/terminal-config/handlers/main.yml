@@ -1,5 +1,0 @@
-- name: Kill iTerm
-  command: killall iTerm2
-
-- name: Start iTerm
-  command: open -a "iTerm.app"
