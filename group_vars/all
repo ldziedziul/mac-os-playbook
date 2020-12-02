@@ -62,4 +62,3 @@ github_projects:
 
 direnv_files:
   - projects/private/.envrc
-  - projects/casumo/.envrc
