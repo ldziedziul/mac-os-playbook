@@ -1,17 +1,3 @@
-- name: Add zsh
-  lineinfile:
-    backup: yes
-    dest: /etc/shells
-    regexp: ^/usr/local/bin/zsh
-    line: /usr/local/bin/zsh
-  become: true
-
-- name: Default to zsh
-  user:
-    name: "{{ ansible_env.USER }}"
-    shell: /usr/local/bin/zsh
-  become: yes
-
 #- name: Verify if oh-my-zsh Is Installed
 #  stat:
 #    path: "~/.oh-my-zsh/oh-my-zsh.sh"
