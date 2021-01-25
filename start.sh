@@ -2,7 +2,7 @@
 
 set -e
 
-readonly REPOSITORY="$(git remote get-url origin)"
+readonly REPOSITORY="https://github.com/ldziedziul/mac-os-playbook"
 TARGET="$(pwd)"
 
 RED=""
