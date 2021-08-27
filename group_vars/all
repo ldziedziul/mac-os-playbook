@@ -9,10 +9,15 @@ homebrew:
   - bash-completion
   - bat
   - curl
+  - curlie
   - direnv
   - docker
   - docker-compose
+  - duf
+  - exa
+  - gh
   - git
+  - git-delta
   - gnupg
   - gnutls
   - hub
@@ -20,6 +25,8 @@ homebrew:
   - httpie
   - jenv
   - jq
+  - lsd
+  - mc
   - neofetch
   - nmap
   - pstree
@@ -57,8 +64,5 @@ dockitems_to_remove:
   - Siri
 
 github_projects:
-  - ldziedziul/diy-ioc-container
+  - ldziedziul/dotfiles
   - ldziedziul/mac-os-playbook
-
-direnv_files:
-  - projects/private/.envrc
