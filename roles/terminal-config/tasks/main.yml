@@ -92,6 +92,19 @@
     - Kill iTerm
     - Start iTerm
 
+- name: Create ~/Library/Application Support/iTerm2/DynamicProfiles Directory
+  file:
+    state: directory
+    path: "~/Library/Application Support/iTerm2/DynamicProfiles"
+  tags: dotfiles
+
+- name: Set iterm2 profile
+  file:
+    src: "~/dotfiles/iterm2/Profiles.json"
+    dest: "~/Library/Application Support/iTerm2/DynamicProfiles/Profiles.json"
+    state: link
+  tags: dotfiles
+
 - name: Use Touch ID for sudo
   tags: sudo
   lineinfile:
