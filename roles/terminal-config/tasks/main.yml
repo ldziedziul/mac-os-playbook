@@ -112,3 +112,11 @@
     insertafter: '^# sudo: auth account password session'
     line: "auth       sufficient     pam_tid.so"
   become: true
+
+- name: Install SpaceVim
+  shell: curl -sLf https://spacevim.org/install.sh | bash -
+  args:
+    warn: no
+  tags:
+    - vim
+    - terminal
