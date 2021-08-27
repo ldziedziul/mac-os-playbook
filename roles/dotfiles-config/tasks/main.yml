@@ -1,12 +1,27 @@
+- name: Link dotfiles directory
+  file:
+    src: "~/Dropbox/conf"
+    dest: "~/dotfiles"
+    state: link
+
 - name: Link dotfiles
   file:
-    src: "~/dotfiles/direnv/{{ item }}"
-    dest: "~/{{ item }}"
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     state: link
-  with_items: "{{ direnv_files }}"
-  tags: dotfiles
-
-- name: Enable direnv files
-  shell: direnv allow "~/{{ item }}"
-  with_items: "{{ direnv_files }}"
+  with_items:
+    - { src: '~/.SpaceVim', dest: '~/.vim' }
+    - { src: '~/dotfiles/zsh/.zprezto', dest: '~/.zprezto' }
+    - { src: '~/dotfiles/zsh/.bash_aliases', dest: '~/.bash_aliases' }
+    - { src: '~/dotfiles/zsh/.exports', dest: '~/.exports' }
+    - { src: '~/dotfiles/zsh/.zlogin', dest: '~/.zlogin' }
+    - { src: '~/dotfiles/zsh/.zlogout', dest: '~/.zlogout' }
+    - { src: '~/dotfiles/zsh/.zlogout', dest: '~/.zlogout' }
+    - { src: '~/dotfiles/zsh/.zpreztorc', dest: '~/.zpreztorc' }
+    - { src: '~/dotfiles/zsh/.zprofile', dest: '~/.zprofile' }
+    - { src: '~/dotfiles/zsh/.zshrc', dest: '~/.zshrc' }
+    - { src: '~/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }
+    - { src: '~/dotfiles/git/.gitconfig-neo4j', dest: '~/.gitconfig-neo4j' }
+    - { src: '~/dotfiles/git/.gitconfig-private', dest: '~/.gitconfig-private' }
+    - { src: '~/dotfiles/git/.gitignore_global', dest: '~/.gitignore_global' }
   tags: dotfiles
