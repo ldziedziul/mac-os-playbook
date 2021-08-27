@@ -1,6 +1,6 @@
 dotfiles_repository: ldziedziul/dotfiles
 login_window_text: l.dziedziul@gmail.com
-dock_icon_size: 44
+dock_icon_size: 42
 
 homebrew:
   - aws-shell
