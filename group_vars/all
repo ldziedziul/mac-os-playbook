@@ -8,6 +8,7 @@ homebrew:
   - bash
   - bash-completion
   - bat
+  - bottom
   - curl
   - curlie
   - direnv
@@ -29,6 +30,7 @@ homebrew:
   - mc
   - neofetch
   - nmap
+  - ncdu
   - pstree
   - python
   - rust
@@ -43,7 +45,7 @@ homebrew_cask:
   - cyberduck
   - docker
   - google-chrome
-  - google-hangouts
+  - iglance
   - iterm2
   - kitty
   - karabiner-elements
