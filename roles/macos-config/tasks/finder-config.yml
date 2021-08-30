@@ -12,5 +12,8 @@
     - { key: "FXPreferredViewStyle", type: "string", value: "Nlsv" }
     - { key: "WarnOnEmptyTrash", type: "bool", value: "false" }
     - { key: "ShowHardDrivesOnDesktop", type: "bool", value: "true" }
+    - { key: "_FXSortFoldersFirst", type: "bool", value: "true" }
+  tags:
+    - finder
   notify:
     - Kill Finder
