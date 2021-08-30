@@ -1,0 +1,10 @@
+---
+- name: Install rectangle
+  homebrew_cask:
+    name: "rectangle"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - rectangle
+    - cask
+    - brew

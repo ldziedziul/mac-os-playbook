@@ -11,6 +11,9 @@
 - name: Install iglance
   include: iglance.yml
 
+- name: Install rectangle
+  include: rectangle.yml
+
 - name: Unhide Directories
   become: true
   command: "chflags nohidden /{{ item }}"

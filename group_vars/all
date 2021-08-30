@@ -48,7 +48,6 @@ homebrew_cask:
   - iterm2
   - kitty
   - karabiner-elements
-  - rectangle
   - slack
   - virtualbox
   - vlc
