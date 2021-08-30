@@ -45,7 +45,6 @@ homebrew_cask:
   - cyberduck
   - docker
   - google-chrome
-  - iglance
   - iterm2
   - kitty
   - karabiner-elements

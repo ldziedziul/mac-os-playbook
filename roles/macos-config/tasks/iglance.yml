@@ -1,0 +1,19 @@
+---
+- name: Install iglance
+  homebrew_cask:
+    name: "iglance"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - iglance
+    - cask
+    - brew
+
+- name: Configure iglance
+  file:
+    src: "~/dotfiles/iglance/io.github.iglance.iGlance.plist"
+    dest: "~/Library/Preferences/io.github.iglance.iGlance.plist"
+    state: link
+  tags:
+    - iglance
+    - dotfiles

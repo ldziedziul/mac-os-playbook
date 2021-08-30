@@ -5,3 +5,5 @@
     accept_external_apps: yes
   tags:
     - obsidian
+    - cask
+    - brew

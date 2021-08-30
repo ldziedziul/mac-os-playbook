@@ -8,6 +8,9 @@
 - name: Safari Configuration
   include: safari-config.yml
 
+- name: Install iglance
+  include: iglance.yml
+
 - name: Unhide Directories
   become: true
   command: "chflags nohidden /{{ item }}"
