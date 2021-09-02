@@ -1,0 +1,10 @@
+---
+- name: Install flameshot
+  homebrew_cask:
+    name: "flameshot"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - flameshot
+    - cask
+    - brew
