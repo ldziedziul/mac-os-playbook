@@ -1,0 +1,10 @@
+---
+- name: Configure display profiles
+  file:
+    src: "~/dotfiles/ColorSync"
+    dest: "~/Library/ColorSync"
+    state: link
+  tags:
+    - display
+    - colorsync
+    - dotfiles
