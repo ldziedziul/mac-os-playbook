@@ -1,0 +1,16 @@
+---
+- name: Install fzf
+  homebrew:
+    name: fzf
+    state: present
+  tags:
+    - brew
+    - fzf
+    - terminal
+- name: Setup fzf
+  shell: '$(brew --prefix)/opt/fzf/install'
+  args:
+    warn: no
+  tags:
+    - fzf
+    - terminal

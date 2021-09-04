@@ -72,6 +72,9 @@
 - name: Configure SDKMAN
   include: sdkman-config.yml
 
+- name: Install fzf
+  include: fzf.yml
+
 - name: Verify if iTerm Runs at Login
   command: osascript -e 'tell application "System Events" to get the name of every login item'
   register: login_items
