@@ -1,0 +1,32 @@
+---
+- name: Install git tools
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - git
+    - git-delta
+    - gh
+    - hub
+  tags:
+    - brew
+    - git
+    - dev
+    - terminal
+
+- name: Link git dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+  with_items:
+    - { src: '~/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }
+    - { src: '~/dotfiles/git/.gitconfig-neo4j', dest: '~/.gitconfig-neo4j' }
+    - { src: '~/dotfiles/git/.gitconfig-hazelcast', dest: '~/.gitconfig-hazelcast' }
+    - { src: '~/dotfiles/git/.gitconfig-private', dest: '~/.gitconfig-private' }
+    - { src: '~/dotfiles/git/.gitignore_global', dest: '~/.gitignore_global' }
+  tags:
+    - dev
+    - dotfiles
+    - git
+    - terminal

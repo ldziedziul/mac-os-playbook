@@ -1,3 +1,7 @@
+
+- name: Install git
+  include: git.yml
+
 - name: Create ~/projects/private Directory
   file:
     state: directory

@@ -20,8 +20,4 @@
     - { src: '~/dotfiles/zsh/.zpreztorc', dest: '~/.zpreztorc' }
     - { src: '~/dotfiles/zsh/.zprofile', dest: '~/.zprofile' }
     - { src: '~/dotfiles/zsh/.zshrc', dest: '~/.zshrc' }
-    - { src: '~/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }
-    - { src: '~/dotfiles/git/.gitconfig-neo4j', dest: '~/.gitconfig-neo4j' }
-    - { src: '~/dotfiles/git/.gitconfig-private', dest: '~/.gitconfig-private' }
-    - { src: '~/dotfiles/git/.gitignore_global', dest: '~/.gitignore_global' }
   tags: dotfiles
