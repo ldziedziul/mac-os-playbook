@@ -1,0 +1,10 @@
+---
+- name: Install audacity
+  homebrew_cask:
+    name: "audacity"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - audacity
+    - cask
+    - brew
