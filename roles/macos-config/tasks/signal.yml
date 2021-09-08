@@ -1,0 +1,10 @@
+---
+- name: Install signal
+  homebrew_cask:
+    name: "signal"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - signal
+    - cask
+    - brew

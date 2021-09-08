@@ -17,6 +17,9 @@
 - name: Install istat menus
   include: istat-menus.yml
 
+- name: Install signal
+  include: signal.yml
+
 - name: Install rectangle
   include: rectangle.yml
 
