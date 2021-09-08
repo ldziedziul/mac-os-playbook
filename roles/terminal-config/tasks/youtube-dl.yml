@@ -1,0 +1,12 @@
+---
+- name: Install youtube-dl
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - youtube-dl
+    - ffmpeg
+  tags:
+    - brew
+    - youtube-dl
+    - terminal
