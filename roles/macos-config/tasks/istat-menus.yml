@@ -1,0 +1,10 @@
+---
+- name: Install istat-menus
+  homebrew_cask:
+    name: "istat-menus"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - istat
+    - cask
+    - brew
