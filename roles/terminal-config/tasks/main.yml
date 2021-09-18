@@ -16,6 +16,8 @@
 
 - include: youtube-dl.yml
 
+- include: vim.yml
+
 - include: zsh.yml
 
 - name: Verify if iTerm Runs at Login
@@ -59,10 +61,3 @@
     line: "auth       sufficient     pam_tid.so"
   become: true
 
-- name: Install SpaceVim
-  shell: curl -sLf https://spacevim.org/install.sh | bash -
-  args:
-    warn: no
-  tags:
-    - vim
-    - terminal

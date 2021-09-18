@@ -1,0 +1,18 @@
+---
+- name: Install SpaceVim
+  shell: curl -sLf https://spacevim.org/install.sh | bash -
+  args:
+    warn: no
+  tags:
+    - vim
+    - spacevim
+    - terminal
+
+- name: Link SpaceVim config
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+  with_items:
+    - { src: '~/.SpaceVim', dest: '~/.vim' }
+  tags: dotfiles
