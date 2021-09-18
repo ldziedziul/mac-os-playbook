@@ -1,8 +1,8 @@
 - name: Ensuring Homebrew Is Installed
-  stat:
-    path: "/usr/local/bin/brew"
+  shell: command -v brew >/dev/null 2>&1
+  ignore_errors: yes
   register: "homebrew_installed"
 
 - name: Installing Homebrew
   command: '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-  when: not homebrew_installed.stat.exists
+  when: not homebrew_installed

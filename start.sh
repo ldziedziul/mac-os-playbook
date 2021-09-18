@@ -55,7 +55,7 @@ if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr
         ok "xcode"
 fi
 
-if [[ ! -x /usr/local/bin/ansible ]];
+if  ! command -v ansible > /dev/null
     then
         installing "ansible" && brew update && brew install ansible
     else
