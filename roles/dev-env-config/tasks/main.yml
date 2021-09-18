@@ -10,13 +10,7 @@
 
 - name: Pull Private Repositories
   git:
-    repo: "https://github.com/{{ item }}.git"
+    repo: "git@github.com:{{ item }}.git"
     dest: "~/projects/private/{{ item }}"
     update: no
-  loop: "{{ github_projects }}"
-
-- name: Update Remote SSH URLs
-  command: "git remote set-url origin git@github.com:{{ item }}.git"
-  args:
-    chdir: "~/projects/private/{{ item }}"
   loop: "{{ github_projects }}"
