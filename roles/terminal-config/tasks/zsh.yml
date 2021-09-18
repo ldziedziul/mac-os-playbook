@@ -1,0 +1,29 @@
+---
+- name: Link zprezto
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+  with_items:
+    - { src: '~/dotfiles/zsh/.bash_aliases', dest: '~/.bash_aliases' }
+    - { src: '~/dotfiles/zsh/.exports', dest: '~/.exports' }
+    - { src: '~/dotfiles/zsh/.zlogin', dest: '~/.zlogin' }
+    - { src: '~/dotfiles/zsh/.zlogout', dest: '~/.zlogout' }
+    - { src: '~/dotfiles/zsh/.zlogout', dest: '~/.zlogout' }
+    - { src: '~/dotfiles/zsh/.zpreztorc', dest: '~/.zpreztorc' }
+    - { src: '~/dotfiles/zsh/.zprofile', dest: '~/.zprofile' }
+    - { src: '~/dotfiles/zsh/.zshrc', dest: '~/.zshrc' }
+  tags:
+    - dotfiles
+    - zsh
+    - zprezto
+    - terminal
+
+- name: Install zprezto
+  git:
+    repo: "https://github.com/sorin-ionescu/prezto.git"
+    dest: "~/.zprezto"
+  tags:
+    - zsh
+    - zprezto
+    - terminal

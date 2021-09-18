@@ -33,7 +33,6 @@ homebrew:
   - wget
   - yadm
   - watch
-  - zsh
 
 homebrew_cask:
   - apptivate

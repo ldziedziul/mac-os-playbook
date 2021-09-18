@@ -11,13 +11,4 @@
     state: link
   with_items:
     - { src: '~/.SpaceVim', dest: '~/.vim' }
-    - { src: '~/dotfiles/zsh/.zprezto', dest: '~/.zprezto' }
-    - { src: '~/dotfiles/zsh/.bash_aliases', dest: '~/.bash_aliases' }
-    - { src: '~/dotfiles/zsh/.exports', dest: '~/.exports' }
-    - { src: '~/dotfiles/zsh/.zlogin', dest: '~/.zlogin' }
-    - { src: '~/dotfiles/zsh/.zlogout', dest: '~/.zlogout' }
-    - { src: '~/dotfiles/zsh/.zlogout', dest: '~/.zlogout' }
-    - { src: '~/dotfiles/zsh/.zpreztorc', dest: '~/.zpreztorc' }
-    - { src: '~/dotfiles/zsh/.zprofile', dest: '~/.zprofile' }
-    - { src: '~/dotfiles/zsh/.zshrc', dest: '~/.zshrc' }
   tags: dotfiles
