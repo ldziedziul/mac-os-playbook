@@ -1,6 +1,7 @@
 
-- name: Install git
-  include: git.yml
+- include: git.yml
+
+- include: gnupg.yml
 
 - name: Create ~/projects/private Directory
   file:

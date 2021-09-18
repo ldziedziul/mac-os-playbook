@@ -1,0 +1,36 @@
+---
+- name: Install gnupg tools
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - gnupg
+  tags:
+    - brew
+    - gnupg
+    - dev
+
+- name: Create ~/.gnupg directory
+  file:
+    state: directory
+    path: ~/.gnupg
+    mode: '0700'
+  tags:
+    - dev
+    - dotfiles
+    - gnupg
+
+- name: Link gnupg dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+  with_items:
+    - { src: '~/dotfiles/gnupg/openpgp-revocs.d', dest: '~/.gnupg/openpgp-revocs.d' }
+    - { src: '~/dotfiles/gnupg/private-keys-v1.d', dest: '~/.gnupg/private-keys-v1.d' }
+    - { src: '~/dotfiles/gnupg/pubring.kbx', dest: '~/.gnupg/pubring.kbx' }
+    - { src: '~/dotfiles/gnupg/trustdb.gpg', dest: '~/.gnupg/trustdb.gpg' }
+  tags:
+    - dev
+    - dotfiles
+    - gnupg

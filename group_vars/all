@@ -16,7 +16,6 @@ homebrew:
   - docker-compose
   - duf
   - exa
-  - gnupg
   - gnutls
   - htop
   - httpie
