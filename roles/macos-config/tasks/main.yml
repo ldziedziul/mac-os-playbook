@@ -1,30 +1,21 @@
 ---
-- name: Dock Configuration
-  include: dock-config.yml
+- include: dock-config.yml
 
-- name: Finder Configuration
-  include: finder-config.yml
+- include: finder-config.yml
 
-- name: Safari Configuration
-  include: safari-config.yml
+- include: safari-config.yml
 
-- name: Install audacity
-  include: audacity.yml
+- include: audacity.yml
 
-- name: Install istat menus
-  include: istat-menus.yml
+- include: istat-menus.yml
 
-- name: Install signal
-  include: signal.yml
+- include: signal.yml
 
-- name: Install rectangle
-  include: rectangle.yml
+- include: rectangle.yml
 
-- name: Install flameshot
-  include: flameshot.yml
+- include: flameshot.yml
 
-- name: Add display profiles
-  include: display-profiles.yml
+- include: display-profiles.yml
 
 - name: Unhide Directories
   become: true
