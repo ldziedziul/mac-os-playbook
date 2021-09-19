@@ -8,9 +8,6 @@
 - name: Safari Configuration
   include: safari-config.yml
 
-- name: Install iglance
-  include: iglance.yml
-
 - name: Install audacity
   include: audacity.yml
 
