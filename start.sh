@@ -64,4 +64,7 @@ fi
 
 export PATH=/usr/local/bin:$PATH
 
-cd "$TARGET" && ansible-playbook playbook.yml -K $@
+#cache sudo with touch id
+sudo echo
+
+cd "$TARGET" && ansible-playbook playbook.yml $@
