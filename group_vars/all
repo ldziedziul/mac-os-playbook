@@ -2,16 +2,6 @@ dotfiles_repository: ldziedziul/dotfiles
 login_window_text: l.dziedziul@gmail.com
 dock_icon_size: 42
 
-dockitems_to_remove:
-  - Contacts
-  - Maps
-  - Photos
-  - FaceTime
-  - iTunes
-  - iBooks
-  - App Store
-  - Siri
-
 github_projects:
   - ldziedziul/dotfiles
   - ldziedziul/mac-os-playbook

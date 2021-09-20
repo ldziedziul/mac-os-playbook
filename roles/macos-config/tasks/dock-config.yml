@@ -18,4 +18,12 @@
 - name: Remove Unused Dock Items
   shell: dockutil --remove '{{ item }}'
   ignore_errors: true
-  with_items: "{{ dockitems_to_remove  }}"
+  with_items:
+    - Contacts
+    - Maps
+    - Photos
+    - FaceTime
+    - iTunes
+    - iBooks
+    - App Store
+    - Siri
