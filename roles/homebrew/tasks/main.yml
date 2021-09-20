@@ -1,23 +1,65 @@
 - name: Updating Homebrew
   homebrew:
     update_homebrew: true
+  tags:
+    - brew
+    - basic-tools
 
 - name: Installing Homebrew Packages
   homebrew:
-    name: "{{ item.name|default(item) }}"
+    name:
+      - aws-shell
+      - awscli
+      - bash
+      - bash-completion
+      - bat
+      - bottom
+      - curl
+      - curlie
+      - direnv
+      - docker
+      - docker-compose
+      - duf
+      - exa
+      - gnutls
+      - htop
+      - httpie
+      - jenv
+      - jq
+      - lsd
+      - mc
+      - neofetch
+      - nmap
+      - ncdu
+      - pstree
+      - python
+      - rust
+      - tree
+      - wget
+      - yadm
+      - watch
     state: present
-  loop: "{{ homebrew }}"
-
-- name: Refreshing sudo Cache
-  command: "echo none"
-  changed_when: false
-  become: yes
+  tags:
+    - brew
+    - basic-tools
 
 - name: Installing Homebrew Cask Packages
   homebrew_cask:
-    name: "{{ item.name|default(item) }}"
+    name:
+      - apptivate
+      - cyberduck
+      - docker
+      - google-chrome
+      - iterm2
+      - kitty
+      - karabiner-elements
+      - slack
+      - virtualbox
+      - vlc
+      - wireshark
     state: present
-    options: "{{ item.install_options | default(omit) }}"
     accept_external_apps: yes
-  ignore_errors: true
-  loop: "{{ homebrew_cask }}"
+  tags:
+    - brew
+    - cask
+    - basic-tools
