@@ -17,6 +17,8 @@
 
 - include: display-profiles.yml
 
+- include: clipboard-manager.yml
+
 - name: Unhide Directories
   become: true
   command: "chflags nohidden /{{ item }}"

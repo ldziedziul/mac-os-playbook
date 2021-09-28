@@ -1,0 +1,17 @@
+---
+- name: Install maccy
+  homebrew_cask:
+    name: "maccy"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - maccy
+    - clipboard
+    - cask
+    - brew
+
+- name: Setup maccy
+  osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }}
+  with_items:
+    - { domain: "org.p0deje.Maccy", key: "imageMaxHeight", type: "int", value: "60" }
+    - { domain: "org.p0deje.Maccy", key: "avoidTakingFocus", type: "int", value: "1" }
