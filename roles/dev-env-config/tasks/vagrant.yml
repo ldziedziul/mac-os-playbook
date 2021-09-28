@@ -1,0 +1,11 @@
+---
+- name: Install vagrant
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - vagrant
+  tags:
+    - brew
+    - vagrant
+    - dev

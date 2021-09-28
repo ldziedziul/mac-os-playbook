@@ -3,6 +3,8 @@
 
 - include: gnupg.yml
 
+- include: vagrant.yml
+
 - name: Create ~/projects/private Directory
   file:
     state: directory
