@@ -13,5 +13,8 @@
 - name: Setup maccy
   osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }}
   with_items:
-    - { domain: "org.p0deje.Maccy", key: "imageMaxHeight", type: "int", value: "60" }
-    - { domain: "org.p0deje.Maccy", key: "avoidTakingFocus", type: "int", value: "1" }
+    - { domain: "org.p0deje.Maccy", key: "imageMaxHeight", type: "string", value: 60 }
+    - { domain: "org.p0deje.Maccy", key: "avoidTakingFocus", type: "int", value: 1 }
+  tags:
+    - maccy
+    - clipboard
