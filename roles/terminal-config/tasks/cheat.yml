@@ -1,0 +1,9 @@
+---
+- name: Install Cheat
+  homebrew:
+    name: cheat
+    state: present
+  tags:
+    - cheat
+    - brew
+    - terminal
