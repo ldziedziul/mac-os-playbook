@@ -1,0 +1,10 @@
+---
+- name: Install utterly
+  homebrew_cask:
+    name: "utterly"
+    state: present
+    accept_external_apps: yes
+  tags:
+    - utterly
+    - cask
+    - brew
