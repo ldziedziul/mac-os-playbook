@@ -2,7 +2,7 @@
   command: killall Dock
 
 - name: Kill Finder
-  command: killall Finde
+  command: killall Finder
 
 - name: Kill Transmission
   command: killall Transmission
