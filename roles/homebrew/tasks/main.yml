@@ -38,6 +38,8 @@
       - wget
       - yadm
       - watch
+      - gnu-sed
+      - coreutils
     state: present
   tags:
     - brew
