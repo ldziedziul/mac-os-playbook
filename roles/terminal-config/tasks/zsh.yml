@@ -4,6 +4,7 @@
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     state: link
+    force: yes
   with_items:
     - { src: '~/dotfiles/zsh/.bash_aliases', dest: '~/.bash_aliases' }
     - { src: '~/dotfiles/zsh/.exports', dest: '~/.exports' }
