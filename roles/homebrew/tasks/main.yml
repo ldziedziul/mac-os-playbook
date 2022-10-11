@@ -56,7 +56,6 @@
       - kitty
       - karabiner-elements
       - slack
-      - virtualbox
       - vlc
       - wireshark
     state: present
