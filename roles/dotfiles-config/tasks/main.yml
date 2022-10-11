@@ -3,4 +3,6 @@
     src: "~/Dropbox/conf"
     dest: "~/dotfiles"
     state: link
+  tags:
+    - dotfiles
 
