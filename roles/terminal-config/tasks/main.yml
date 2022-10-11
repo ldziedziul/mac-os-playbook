@@ -1,15 +1,3 @@
-- name: Enforce OSX-specific Key Bindings
-  lineinfile:
-    dest: ~/.zshrc
-    regexp: "{{ item.value }}"
-    line: "bindkey \"{{ item.key }}\" {{ item.value }}"
-    state: present
-  with_items:
-    - { key: '^[a', value: 'beginning-of-line' }
-    - { key: '^[e', value: 'end-of-line' }
-    - { key: '\e[A', value: 'history-search-backward' }
-    - { key: '\e[B', value: 'history-search-forward' }
-
 - include: sdkman-config.yml
 
 - include: fzf.yml
@@ -23,6 +11,19 @@
 - include: zsh.yml
 
 - include: cheat.yml
+
+- name: Enforce OSX-specific Key Bindings
+  lineinfile:
+    dest: ~/.zshrc
+    regexp: "{{ item.value }}"
+    line: "bindkey \"{{ item.key }}\" {{ item.value }}"
+    state: present
+  with_items:
+    - { key: '^[a', value: 'beginning-of-line' }
+    - { key: '^[e', value: 'end-of-line' }
+    - { key: '\e[A', value: 'history-search-backward' }
+    - { key: '\e[B', value: 'history-search-forward' }
+
 
 - name: Verify if iTerm Runs at Login
   command: osascript -e 'tell application "System Events" to get the name of every login item'
