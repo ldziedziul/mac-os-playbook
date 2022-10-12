@@ -22,6 +22,6 @@
 - name: Set the clipboard as the default location for the screenshots
   osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }}
   with_items:
-    - { domain: "com.apple.screencapture", key: "location", type: "string", value: "clipboard" }
+    - { domain: "com.apple.screencapture", key: "target", type: "string", value: "clipboard" }
   tags:
     - clipboard
