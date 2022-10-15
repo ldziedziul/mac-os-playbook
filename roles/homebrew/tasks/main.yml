@@ -27,6 +27,7 @@
       - jenv
       - jq
       - lsd
+      - maven
       - mc
       - neofetch
       - nmap
