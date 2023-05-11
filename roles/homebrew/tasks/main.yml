@@ -37,6 +37,7 @@
       - rust
       - tree
       - wget
+      - yt-dlp
       - yadm
       - watch
       - gnu-sed
