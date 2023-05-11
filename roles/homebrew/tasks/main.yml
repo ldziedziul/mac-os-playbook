@@ -42,6 +42,7 @@
       - watch
       - gnu-sed
       - coreutils
+      - starship
     state: present
   tags:
     - brew
