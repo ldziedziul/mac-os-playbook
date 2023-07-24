@@ -7,6 +7,7 @@
     - { key: "show-process-indicators", type: "bool", value: "true" }
     - { key: "expose-animation-duration", type: "float", value: "0.1" }
     - { key: "dashboard-in-overlay", type: "bool", value: "false" }
+    - { key: "no-bouncing", type: "bool", value: "true" }
   notify:
     - Kill Dock
 
