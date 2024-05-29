@@ -1,25 +1,25 @@
 ---
-- include: dock-config.yml
+- import_tasks: dock-config.yml
 
-- include: finder-config.yml
+- import_tasks: finder-config.yml
 
-- include: safari-config.yml
+- import_tasks: safari-config.yml
 
-- include: audacity.yml
+- import_tasks: audacity.yml
 
-- include: istat-menus.yml
+- import_tasks: istat-menus.yml
 
-- include: signal.yml
+- import_tasks: signal.yml
 
-- include: rectangle.yml
+- import_tasks: rectangle.yml
 
-- include: flameshot.yml
+- import_tasks: flameshot.yml
 
-- include: display-profiles.yml
+- import_tasks: display-profiles.yml
 
-- include: clipboard-manager.yml
+- import_tasks: clipboard-manager.yml
 
-- include: utterly.yml
+- import_tasks: utterly.yml
 
 - name: Unhide Directories
   become: true

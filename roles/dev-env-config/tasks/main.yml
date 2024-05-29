@@ -1,9 +1,8 @@
+- import_tasks: git.yml
 
-- include: git.yml
+- import_tasks: gnupg.yml
 
-- include: gnupg.yml
-
-- include: vagrant.yml
+- import_tasks: vagrant.yml
 
 - name: Create ~/projects/private Directory
   file:

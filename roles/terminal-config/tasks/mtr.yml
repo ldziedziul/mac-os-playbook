@@ -11,8 +11,6 @@
 - name: Setup mtr permissions
   shell: 'chown root $(which mtr-packet) && chmod 4755 $(which mtr-packet)'
   become: yes
-  args:
-    warn: no
   tags:
     - mtr
     - terminal

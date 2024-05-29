@@ -1,16 +1,16 @@
-- include: sdkman-config.yml
+- import_tasks: sdkman-config.yml
 
-- include: fzf.yml
+- import_tasks: fzf.yml
 
-- include: mtr.yml
+- import_tasks: mtr.yml
 
-- include: youtube-dl.yml
+- import_tasks: youtube-dl.yml
 
-- include: vim.yml
+- import_tasks: vim.yml
 
-- include: zsh.yml
+- import_tasks: zsh.yml
 
-- include: cheat.yml
+- import_tasks: cheat.yml
 
 - name: Enforce OSX-specific Key Bindings
   lineinfile:

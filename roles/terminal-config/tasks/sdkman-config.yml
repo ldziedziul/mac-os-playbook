@@ -8,7 +8,6 @@
   shell: 'curl -s http://get.sdkman.io | bash'
   args:
     executable: /bin/bash
-    warn: no
   when: not sdkman_installed.stat.exists
 
 - name: Add SDKMAN in .zshrc
