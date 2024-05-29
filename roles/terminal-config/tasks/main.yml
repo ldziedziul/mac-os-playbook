@@ -60,9 +60,6 @@
 
 - name: Use Touch ID for sudo
   tags: sudo
-  lineinfile:
-    dest: /etc/pam.d/sudo
-    insertafter: '^# sudo: auth account password session'
-    line: "auth       sufficient     pam_tid.so"
+  shell: sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
   become: true
 
